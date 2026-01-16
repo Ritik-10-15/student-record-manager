@@ -15,6 +15,7 @@ int main(){
         cout << "0. Exit\n";
         cout << "Enter choice: ";
         cin>>choice;
+        cout <<"****************************\n";
         if(choice==1){
             int id;
             string name;
@@ -38,6 +39,29 @@ int main(){
             cout<<"enter Id to search:";
             cin>>id;
             manager.searchId(id);
+        }
+        else if(choice==4){
+            int id;
+            double marks;
+            cout<<"Enter ID:";
+            cin>>id;
+            cout<<"Enter new marks:";
+            cin>>marks;
+            if(!manager.updateMarks(id,marks)){
+                cout<<"student not found.\n";
+            }
+        }
+        else if(choice==5){
+            int id;
+            cout<<"enter Id to remove:";
+            cin>>id;
+            if(!manager.removeStudent(id)){
+                cout<<"student not found.\n";
+            }
+        }
+        else if(choice==6){
+            cout<<"Average Marks:"
+                <<manager.calculateAverage()<<endl;
         }
     }
     while(choice!=0);

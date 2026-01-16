@@ -34,3 +34,35 @@ bool StudentManager::searchId(int id){
     students[index].display();
     return true;
 }
+//update Student marks
+bool StudentManager::updateMarks(int id, double newMarks){
+    int index=findbyId(id);
+    if(index==-1){
+        return false;
+    }
+    students[index].setStudentMarks(newMarks);
+    return true;
+}
+//remove student 
+bool StudentManager::removeStudent(int id){
+    int index=findbyId(id);
+    if(index==-1){
+        cout<<"student not found.\n";
+        return false;
+    }
+    students.erase(students.begin()+index);
+    return true;
+}
+//calculate average marks
+double StudentManager::calculateAverage(){
+    if(students.empty())return 0.0;
+    double sum=0;
+    for(const Student& s: students){
+        sum+=s.getStudentMarks();
+    }
+    return sum/students.size();
+}
+//check if empty
+bool StudentManager::isEmpty(){
+    return students.empty();
+}

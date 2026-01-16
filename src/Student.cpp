@@ -30,7 +30,7 @@ int Student::getStudentId(){
 string Student::getStudentName(){
     return studentName;
 }
-double Student::getStudentMarks(){
+double Student::getStudentMarks() const {
     return studentMarks;
 }
 void Student::display() const{

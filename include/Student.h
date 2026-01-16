@@ -18,7 +18,7 @@ class Student{
     //getters
     int getStudentId();
     string getStudentName();
-    double getStudentMarks();
+    double getStudentMarks() const;
     //Display student info
     void display() const;
 
