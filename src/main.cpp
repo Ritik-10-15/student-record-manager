@@ -33,7 +33,12 @@ int main(){
         else if(choice==2){
             manager.displayAll();
         }
-        
+        else if(choice==3){
+            int id;
+            cout<<"enter Id to search:";
+            cin>>id;
+            manager.searchId(id);
+        }
     }
     while(choice!=0);
     cout<<"exiting program.\n";

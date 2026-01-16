@@ -34,7 +34,8 @@ double Student::getStudentMarks(){
     return studentMarks;
 }
 void Student::display() const{
-    cout<<"ID:"<<studentId;
-    cout<<"Name:"<<studentName;
-    cout<<"Marks:"<<studentMarks;
+    cout<<"ID:"<<studentId<<endl;
+    cout<<"Name:"<<studentName<<endl;
+    cout<<"Marks:"<<studentMarks<<endl;
+    cout<<"============================"<<endl;
 }
